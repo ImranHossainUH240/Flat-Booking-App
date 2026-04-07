@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FA">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Profile" android:textSize="28sp" android:textStyle="bold" android:layout_marginBottom="16dp"/>
+
+        <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" app:cardCornerRadius="8dp" app:cardElevation="2dp" android:layout_marginBottom="16dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="16dp" android:gravity="center_vertical">
+                <ImageView android:layout_width="60dp" android:layout_height="60dp" android:background="#E0E0E0" />
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="16dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="John Student" android:textSize="20sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="john@university.edu" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" app:cardCornerRadius="8dp" app:cardElevation="2dp" android:layout_marginBottom="24dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Current Lease" android:textStyle="bold" android:layout_marginBottom="8dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Modern Studio - 123 Student Ave" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Expires: Feb 28, 2027" android:textColor="#666666" android:layout_marginTop="4dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="#E3F2FD"
+            android:layout_marginBottom="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Landlord Dashboard"
+                    android:textColor="#1565C0"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Have a vacant room? List it here for thousands of students to see."
+                    android:layout_marginBottom="12dp"/>
+                <Button
+                    android:id="@+id/btnListProperty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="List New Property"
+                    android:backgroundTint="#1565C0"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="My Bookings" android:paddingVertical="16dp" android:drawableStart="@android:drawable/ic_menu_my_calendar" android:drawablePadding="16dp"/>
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E0E0E0"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Saved Properties" android:paddingVertical="16dp" android:drawableStart="@android:drawable/ic_menu_save" android:drawablePadding="16dp"/>
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E0E0E0"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Messages (3 unread)" android:paddingVertical="16dp" android:drawableStart="@android:drawable/sym_action_chat" android:drawablePadding="16dp"/>
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E0E0E0"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Settings" android:paddingVertical="16dp" android:drawableStart="@android:drawable/ic_menu_preferences" android:drawablePadding="16dp"/>
+    </LinearLayout>
+</ScrollView>

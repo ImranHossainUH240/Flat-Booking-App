@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/etBudget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Budget (£)"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/etUniDistance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Max Distance to University (km)"
+            android:inputType="numberDecimal"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/etWorkDistance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Max Distance to Work (km)"
+            android:inputType="numberDecimal"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/etCommuteTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Max Commute Time (minutes)"
+            android:inputType="number"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/etTransportCost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Max Transport Cost (£)"
+            android:inputType="numberDecimal"
+            android:layout_marginTop="8dp" />
+
+        <CheckBox
+            android:id="@+id/cbFlexibleLease"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Require Flexible Lease"
+            android:layout_marginTop="10dp" />
+
+        <CheckBox
+            android:id="@+id/cbVisaCompatible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Require Visa-Compatible"
+            android:layout_marginTop="4dp" />
+
+        <CheckBox
+            android:id="@+id/cbStudySpace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Require Study Space"
+            android:layout_marginTop="4dp" />
+
+        <Button
+            android:id="@+id/btnApplyFilter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Apply Filter"
+            android:layout_marginTop="16dp" />
+    </LinearLayout>
+</ScrollView>
