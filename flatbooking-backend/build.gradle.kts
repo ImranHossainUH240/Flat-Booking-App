@@ -34,5 +34,7 @@ dependencies {
         // Testing
         testImplementation(libs.ktor.server.test.host) // This replaces ktor-server-tests
         testImplementation(libs.kotlin.test.junit)
+
+        implementation("org.postgresql:postgresql:42.6.0")
     }
 }

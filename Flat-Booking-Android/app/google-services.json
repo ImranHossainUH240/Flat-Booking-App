@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "22105585112",
+    "project_id": "flat-booking-app-487dc",
+    "storage_bucket": "flat-booking-app-487dc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:22105585112:android:25a8169997475d87b7aead",
+        "android_client_info": {
+          "package_name": "com.example.flatbookingapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoOsyXa56n02ddTqZvheRDL5rrM7xuzvM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

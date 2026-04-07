@@ -5,30 +5,40 @@ import org.jetbrains.exposed.sql.transactions.transaction
 import org.jetbrains.exposed.sql.transactions.experimental.newSuspendedTransaction
 
 object DatabaseFactory {
+
     fun init() {
-        Database.connect("jdbc:h2:mem:test;DB_CLOSE_DELAY=-1", driver = "org.h2.Driver")
+        // 1. PASTE YOUR NEON JDBC URL HERE
+        val jdbcUrl = "jdbc:postgresql://ep-royal-truth-a1mlm73d-pooler.ap-southeast-1.aws.neon.tech/neondb?user=neondb_owner&password=npg_gyKZ53ErJSka&sslmode=require&channelBinding=require"
+
+        // 2. Connect to PostgreSQL instead of H2
+        Database.connect(url = jdbcUrl, driver = "org.postgresql.Driver")
 
         transaction {
+            // This creates the table in your cloud database if it doesn't exist yet
             SchemaUtils.create(PropertiesTable)
 
-            // Dummy data updated with real coordinates in London
-            PropertiesTable.insert {
-                it[title] = "Studio Flat near University"
-                it[description] = "Nice studio with furnished room and WiFi."
-                it[rent] = 650
-                it[location] = "London Zone 2"
-                it[latitude] = 51.5074   // <-- London Lat
-                it[longitude] = -0.1278  // <-- London Lng
-                it[distanceToUniversity] = 2.0
-                it[distanceToWork] = 4.0
-                it[commuteTime] = 25
-                it[transportCost] = 4.5
-                it[flexibleLease] = true
-                it[visaCompatible] = true
-                it[studySpace] = true
+            // Optional: You can comment this dummy data out after the first run so it
+            // doesn't keep adding the same "Studio Flat" every time you restart the server.
+            val currentCount = PropertiesTable.selectAll().count()
+            if (currentCount == 0L) {
+                PropertiesTable.insert {
+                    it[title] = "Studio Flat near University"
+                    it[description] = "Nice studio with furnished room and WiFi."
+                    it[rent] = 650
+                    it[location] = "London Zone 2"
+                    it[latitude] = 51.5074
+                    it[longitude] = -0.1278
+                    it[distanceToUniversity] = 2.0
+                    it[distanceToWork] = 4.0
+                    it[commuteTime] = 25
+                    it[transportCost] = 4.5
+                    it[flexibleLease] = true
+                    it[visaCompatible] = true
+                    it[studySpace] = true
+                }
             }
         }
-    }
+    } // <--- THIS WAS THE MISSING BRACE!
 
     suspend fun <T> dbQuery(block: suspend () -> T): T =
         newSuspendedTransaction { block() }

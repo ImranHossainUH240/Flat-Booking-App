@@ -14,7 +14,7 @@ data class Property(
     val flexibleLease: Boolean,
     val visaCompatible: Boolean,
     val studySpace: Boolean
-)
+): Serializable
 // Added this new class for sending data TO the server
 data class PropertyRequest(
     val title: String,
@@ -30,4 +30,4 @@ data class PropertyRequest(
     val flexibleLease: Boolean,
     val visaCompatible: Boolean,
     val studySpace: Boolean
-): Serializable
+)
