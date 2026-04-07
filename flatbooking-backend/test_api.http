@@ -1,0 +1,18 @@
+POST http://localhost:8080/properties
+Content-Type: application/json
+
+{
+  "title": "Luxury Penthouse",
+  "description": "Amazing view of the city with a private balcony.",
+  "rent": 1200,
+  "location": "London Zone 1",
+  "latitude": 51.509865,
+  "longitude": -0.118092,
+  "distanceToUniversity": 1.5,
+  "distanceToWork": 2.0,
+  "commuteTime": 15,
+  "transportCost": 2.5,
+  "flexibleLease": false,
+  "visaCompatible": true,
+  "studySpace": true
+}
